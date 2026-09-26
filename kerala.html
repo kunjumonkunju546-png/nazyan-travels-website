@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kerala Package | NAZYAN TRAVELS</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f7f7f5;
+    color:#222;
+    line-height:1.6;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,0.96);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #e9e9e9;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    min-height:76px;
+    padding:10px 25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+}
+
+.brand img{
+    width:52px;
+    height:52px;
+    object-fit:contain;
+}
+
+.brand-text{
+    font-size:21px;
+    font-weight:800;
+    letter-spacing:1px;
+    background:linear-gradient(90deg,#b8860b,#d4a017,#7d5a00);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.brand-tagline{
+    font-size:9px;
+    letter-spacing:2px;
+    color:#777;
+    margin-top:1px;
+}
+
+.home-btn{
+    text-decoration:none;
+    color:#333;
+    border:1px solid #ddd;
+    padding:9px 17px;
+    border-radius:25px;
+    font-size:14px;
+    transition:.3s;
+}
+
+.home-btn:hover{
+    background:#222;
+    color:white;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:590px;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.48),
+            rgba(0,0,0,.62)
+        ),
+        url("kerala.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+
+    padding:80px 20px;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero-small{
+    font-size:13px;
+    letter-spacing:4px;
+    font-weight:bold;
+    margin-bottom:18px;
+    color:#f3d58a;
+}
+
+.hero h1{
+    font-size:68px;
+    line-height:1;
+    margin-bottom:20px;
+    letter-spacing:-2px;
+}
+
+.hero-sub{
+    font-size:18px;
+    max-width:700px;
+    margin:auto;
+    color:#f1f1f1;
+}
+
+.hero-buttons{
+    margin-top:32px;
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:13px 25px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-light{
+    background:white;
+    color:#222;
+}
+
+.btn-light:hover{
+    transform:translateY(-2px);
+}
+
+.btn-whatsapp{
+    background:#168c55;
+    color:white;
+}
+
+.btn-whatsapp:hover{
+    background:#107143;
+    transform:translateY(-2px);
+}
+
+
+/* ================= GENERAL ================= */
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:75px 25px;
+}
+
+.section-label{
+    text-align:center;
+    color:#a47a11;
+    font-size:12px;
+    letter-spacing:3px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:38px;
+    line-height:1.2;
+    margin-bottom:18px;
+}
+
+.section-text{
+    max-width:720px;
+    margin:0 auto 45px;
+    text-align:center;
+    color:#666;
+    font-size:16px;
+}
+
+
+/* ================= INTRO ================= */
+
+.intro{
+    background:white;
+}
+
+.intro h2{
+    font-size:42px;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.intro p{
+    max-width:750px;
+    margin:auto;
+    text-align:center;
+    color:#666;
+    font-size:17px;
+}
+
+
+/* ================= QUICK INFO ================= */
+
+.info-grid{
+    margin-top:45px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.info-card{
+    background:#fff;
+    padding:27px 18px;
+    text-align:center;
+    border-radius:16px;
+    border:1px solid #ececec;
+    transition:.3s;
+}
+
+.info-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.07);
+}
+
+.info-icon{
+    font-size:27px;
+    margin-bottom:10px;
+}
+
+.info-card h3{
+    font-size:15px;
+    margin-bottom:5px;
+}
+
+.info-card p{
+    font-size:13px;
+    color:#777;
+}
+
+
+/* ================= VISUAL ================= */
+
+.visual{
+    min-height:430px;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,.35),
+            rgba(0,0,0,.55)
+        ),
+        url("kerala.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    color:white;
+
+    padding:60px 20px;
+}
+
+.visual-content{
+    max-width:700px;
+}
+
+.visual h2{
+    font-size:43px;
+    line-height:1.2;
+    margin-bottom:15px;
+}
+
+.visual p{
+    font-size:17px;
+    color:#eee;
+}
+
+
+/* ================= ITINERARY ================= */
+
+.itinerary{
+    background:#f7f7f5;
+}
+
+.timeline{
+    max-width:850px;
+    margin:45px auto 0;
+}
+
+.day{
+    display:flex;
+    gap:25px;
+    margin-bottom:25px;
+
+    background:white;
+
+    padding:27px;
+
+    border-radius:16px;
+    border:1px solid #e9e9e9;
+}
+
+.day-number{
+    min-width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    background:#222;
+    color:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-weight:bold;
+    font-size:14px;
+}
+
+.day-content h3{
+    margin-bottom:7px;
+    font-size:20px;
+}
+
+.day-content p{
+    color:#666;
+    font-size:14px;
+}
+
+
+/* ================= INCLUDES ================= */
+
+.include-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-top:45px;
+}
+
+.include-box{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    border:1px solid #e8e8e8;
+}
+
+.include-box h3{
+    margin-bottom:20px;
+    font-size:21px;
+}
+
+.include-box ul{
+    list-style:none;
+}
+
+.include-box li{
+    margin:12px 0;
+    color:#555;
+    font-size:14px;
+}
+
+.include-box li::before{
+    content:"✓";
+    color:#a47a11;
+    font-weight:bold;
+    margin-right:10px;
+}
+
+.not-included li::before{
+    content:"–";
+    color:#999;
+}
+
+
+/* ================= PRICE ================= */
+
+.price-section{
+    background:#171717;
+    color:white;
+}
+
+.price-card{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+.price-card .section-label{
+    color:#d7ad43;
+}
+
+.price-card h2{
+    font-size:46px;
+    margin-bottom:5px;
+}
+
+.price{
+    font-size:56px;
+    font-weight:800;
+    color:#e0b84f;
+    margin:10px 0;
+}
+
+.price-note{
+    color:#aaa;
+    font-size:13px;
+}
+
+.highlights{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin:30px 0;
+}
+
+.highlight{
+    border:1px solid #444;
+    padding:9px 15px;
+    border-radius:30px;
+    font-size:13px;
+    color:#ddd;
+}
+
+.disclaimer{
+    max-width:650px;
+    margin:25px auto 0;
+    color:#999;
+    font-size:12px;
+}
+
+
+/* ================= WHATSAPP ENQUIRY ================= */
+
+.whatsapp-section{
+    background:#eef7f1;
+    padding:75px 20px;
+    text-align:center;
+}
+
+.whatsapp-box{
+    max-width:850px;
+    margin:auto;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:50px 30px;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.07);
+}
+
+.whatsapp-icon{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+.whatsapp-box h2{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.whatsapp-box p{
+    max-width:600px;
+    margin:0 auto;
+    color:#666;
+}
+
+
+/* ================= FORM ================= */
+
+#keralaEnquiryForm{
+    max-width:520px;
+    margin:30px auto 0;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:13px;
+}
+
+#keralaEnquiryForm input,
+#keralaEnquiryForm select{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    background:#fff;
+
+    font-size:14px;
+
+    outline:none;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    color:#333;
+}
+
+#keralaEnquiryForm input:focus,
+#keralaEnquiryForm select:focus{
+    border-color:#159447;
+    box-shadow:0 0 0 3px rgba(21,148,71,.08);
+}
+
+#keralaEnquiryForm button{
+
+    border:none;
+
+    cursor:pointer;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    font-size:14px;
+
+    margin-top:5px;
+
+    width:100%;
+}
+
+.whatsapp-btn{
+
+    display:inline-block;
+
+    background:#159447;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 30px;
+
+    border-radius:35px;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.whatsapp-btn:hover{
+    background:#10753a;
+    transform:translateY(-2px);
+}
+
+.phone{
+    display:block;
+    margin-top:18px;
+    color:#555;
+    font-size:14px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#111;
+    color:#ccc;
+
+    padding:50px 20px 25px;
+
+    text-align:center;
+}
+
+.footer-logo{
+    font-size:25px;
+    font-weight:800;
+    letter-spacing:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #b8860b,
+            #e2bd62,
+            #7d5a00
+        );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.footer-tagline{
+    font-size:10px;
+    letter-spacing:3px;
+    color:#777;
+    margin-top:5px;
+}
+
+.footer-services{
+    margin:25px auto;
+
+    display:flex;
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    font-size:13px;
+
+    color:#aaa;
+}
+
+.copyright{
+    border-top:1px solid #292929;
+
+    padding-top:20px;
+
+    margin-top:25px;
+
+    font-size:12px;
+
+    color:#666;
+}
+
+
+/* ================= TABLET ================= */
+
+@media(max-width:800px){
+
+    .navbar{
+        min-height:68px;
+        padding:8px 15px;
+    }
+
+    .brand img{
+        width:43px;
+        height:43px;
+    }
+
+    .brand-text{
+        font-size:17px;
+    }
+
+    .brand-tagline{
+        font-size:7px;
+        letter-spacing:1.5px;
+    }
+
+    .home-btn{
+        padding:7px 12px;
+        font-size:12px;
+    }
+
+
+    .hero{
+        min-height:530px;
+        padding:70px 18px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero-sub{
+        font-size:15px;
+    }
+
+    .hero-small{
+        font-size:10px;
+        letter-spacing:2.5px;
+    }
+
+
+    .container{
+        padding:55px 18px;
+    }
+
+    .intro h2{
+        font-size:34px;
+    }
+
+    .section-title{
+        font-size:31px;
+    }
+
+
+    .info-grid{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .info-card{
+        padding:22px 10px;
+    }
+
+
+    .visual{
+        min-height:350px;
+    }
+
+    .visual h2{
+        font-size:34px;
+    }
+
+
+    .day{
+        gap:15px;
+        padding:20px;
+    }
+
+    .day-number{
+        min-width:55px;
+        width:55px;
+        height:55px;
+        font-size:12px;
+    }
+
+    .day-content h3{
+        font-size:17px;
+    }
+
+    .day-content p{
+        font-size:13px;
+    }
+
+
+    .include-grid{
+        grid-template-columns:1fr;
+    }
+
+
+    .price-card h2{
+        font-size:32px;
+    }
+
+    .price{
+        font-size:46px;
+    }
+
+
+    .whatsapp-box{
+        padding:40px 20px;
+    }
+
+    .whatsapp-box h2{
+        font-size:29px;
+    }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:480px){
+
+    .brand-text{
+        font-size:15px;
+    }
+
+    .brand-tagline{
+        display:none;
+    }
+
+    .home-btn{
+        font-size:11px;
+        padding:7px 10px;
+    }
+
+
+    .hero{
+        min-height:500px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+
+    .hero-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:90%;
+        max-width:300px;
+    }
+
+
+    .info-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .info-card p{
+        font-size:12px;
+    }
+
+
+    .day{
+        align-items:flex-start;
+    }
+
+    .day-number{
+        flex-shrink:0;
+    }
+
+
+    .footer-services{
+        gap:10px;
+    }
+
+}
+
+
+/* ================= FORM MOBILE ================= */
+
+@media(max-width:480px){
+
+    .whatsapp-section{
+        padding:55px 15px;
+    }
+
+    .whatsapp-box{
+        padding:35px 18px;
+        border-radius:20px;
+    }
+
+    .whatsapp-box h2{
+        font-size:27px;
+    }
+
+    #keralaEnquiryForm input,
+    #keralaEnquiryForm select{
+        padding:13px 14px;
+        font-size:13px;
+    }
+
+    .whatsapp-btn{
+        padding:14px 18px;
+        font-size:13px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="navbar">
+
+        <a href="index.html" class="brand">
+
+            <img
+                src="nazyAn-logo.png"
+                alt="NAZYAN TRAVELS Logo"
+            >
+
+            <div>
+
+                <div class="brand-text">
+                    NAZYAN TRAVELS
+                </div>
+
+                <div class="brand-tagline">
+                    YOUR JOURNEY BEGINS WITH US
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <a
+            href="index.html"
+            class="home-btn"
+        >
+            ← Back to Home
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            KERALA HOLIDAY EXPERIENCE
+        </div>
+
+        <h1>
+            Kerala
+        </h1>
+
+        <p class="hero-sub">
+            4 Days / 3 Nights · Munnar · Thekkady · Alappuzha · Kochi
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#package"
+                class="btn btn-light"
+            >
+                Explore Package
+            </a>
+
+
+            <a
+                href="#enquiry"
+                class="btn btn-whatsapp"
+            >
+                WhatsApp Enquiry
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= INTRO ================= -->
+
+<section
+    class="intro"
+    id="package"
+>
+
+    <div class="container">
+
+        <div class="section-label">
+            DISCOVER KERALA
+        </div>
+
+        <h2>
+            4 Days in Paradise
+        </h2>
+
+        <p>
+            Lose yourself in the breathtaking beauty of Kerala —
+            where misty mountains, peaceful backwaters, lush greenery
+            and unforgettable experiences come together.
+        </p>
+
+
+        <!-- QUICK INFO -->
+
+        <div class="info-grid">
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    🗓️
+                </div>
+
+                <h3>
+                    Duration
+                </h3>
+
+                <p>
+                    4 Days / 3 Nights
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    📍
+                </div>
+
+                <h3>
+                    Destinations
+                </h3>
+
+                <p>
+                    Munnar · Thekkady · Alappuzha · Kochi
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    🏨
+                </div>
+
+                <h3>
+                    Accommodation
+                </h3>
+
+                <p>
+                    Hotel Stay
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="info-icon">
+                    🚗
+                </div>
+
+                <h3>
+                    Transportation
+                </h3>
+
+                <p>
+                    Comfortable Transfers
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= VISUAL ================= -->
+
+<section class="visual">
+
+    <div class="visual-content">
+
+        <div class="section-label">
+            EXPERIENCE KERALA
+        </div>
+
+        <h2>
+            Where every journey becomes a memory.
+        </h2>
+
+        <p>
+            From the green hills of Munnar to the tranquil waters
+            of Alappuzha, experience Kerala at your own pace.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ITINERARY ================= -->
+
+<section class="itinerary">
+
+    <div class="container">
+
+        <div class="section-label">
+            SAMPLE ITINERARY
+        </div>
+
+        <h2 class="section-title">
+            Your Kerala Journey
+        </h2>
+
+        <p class="section-text">
+            A carefully planned journey covering some of Kerala's
+            most beautiful destinations.
+        </p>
+
+
+        <div class="timeline">
+
+
+            <div class="day">
+
+                <div class="day-number">
+                    DAY 01
+                </div>
+
+                <div class="day-content">
+
+                    <h3>
+                        Kochi → Munnar
+                    </h3>
+
+                    <p>
+                        Arrival at Kochi and transfer towards the
+                        beautiful hill station of Munnar. Enjoy
+                        scenic views, tea plantations and the peaceful
+                        mountain atmosphere.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="day">
+
+                <div class="day-number">
+                    DAY 02
+                </div>
+
+                <div class="day-content">
+
+                    <h3>
+                        Explore Munnar
+                    </h3>
+
+                    <p>
+                        Discover the natural beauty of Munnar with
+                        sightseeing around the tea gardens, viewpoints
+                        and popular attractions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="day">
+
+                <div class="day-number">
+                    DAY 03
+                </div>
+
+                <div class="day-content">
+
+                    <h3>
+                        Thekkady → Alappuzha
+                    </h3>
+
+                    <p>
+                        Continue the journey through Kerala's scenic
+                        landscapes before reaching Alappuzha,
+                        famous for its peaceful backwaters.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="day">
+
+                <div class="day-number">
+                    DAY 04
+                </div>
+
+                <div class="day-content">
+
+                    <h3>
+                        Alappuzha → Kochi
+                    </h3>
+
+                    <p>
+                        Enjoy the backwater experience and proceed
+                        towards Kochi for departure or onward travel.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PACKAGE DETAILS ================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            PACKAGE DETAILS
+        </div>
+
+        <h2 class="section-title">
+            What's Included
+        </h2>
+
+        <p class="section-text">
+            Your package can be customised according to your
+            travel dates, hotel preference and number of travellers.
+        </p>
+
+
+        <div class="include-grid">
+
+
+            <div class="include-box">
+
+                <h3>
+                    ✓ Included
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Flight option available
+                    </li>
+
+                    <li>
+                        Hotel accommodation
+                    </li>
+
+                    <li>
+                        Transportation
+                    </li>
+
+                    <li>
+                        Sightseeing
+                    </li>
+
+                    <li>
+                        Alappuzha Houseboat experience
+                    </li>
+
+                    <li>
+                        Travel assistance
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="include-box not-included">
+
+                <h3>
+                    Not Included
+                </h3>
+
+                <ul>
+
+                    <li>
+                        Personal expenses
+                    </li>
+
+                    <li>
+                        Meals not specifically mentioned
+                    </li>
+
+                    <li>
+                        Travel insurance
+                    </li>
+
+                    <li>
+                        Visa / permit charges if applicable
+                    </li>
+
+                    <li>
+                        Anything not specifically listed
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PRICE ================= -->
+
+<section class="price-section">
+
+    <div class="container">
+
+        <div class="price-card">
+
+            <div class="section-label">
+                KERALA PACKAGE
+            </div>
+
+            <h2>
+                Starting From
+            </h2>
+
+            <div class="price">
+                ₹9,999
+            </div>
+
+            <div class="price-note">
+                4 Days / 3 Nights
+            </div>
+
+
+            <div class="highlights">
+
+                <div class="highlight">
+                    ✈ Flight Option
+                </div>
+
+                <div class="highlight">
+                    🏨 Hotel Stay
+                </div>
+
+                <div class="highlight">
+                    🚗 Transportation
+                </div>
+
+                <div class="highlight">
+                    🚤 Houseboat
+                </div>
+
+                <div class="highlight">
+                    📍 Sightseeing
+                </div>
+
+                <div class="highlight">
+                    🤝 Travel Assistance
+                </div>
+
+            </div>
+
+
+            <p class="disclaimer">
+
+                Package price may vary depending on travel dates,
+                flight availability, hotel category, number of travellers
+                and selected inclusions. Contact NAZYAN TRAVELS for the
+                final quotation.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= WHATSAPP ENQUIRY ================= -->
+
+<section
+    class="whatsapp-section"
+    id="enquiry"
+>
+
+    <div class="whatsapp-box">
+
+        <div class="whatsapp-icon">
+            💬
+        </div>
+
+        <h2>
+            Plan Your Kerala Trip
+        </h2>
+
+        <p>
+            Share a few details with us and our team will
+            prepare the best available package for you.
+        </p>
+
+
+        <form id="keralaEnquiryForm">
+
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Your Name"
+                required
+            >
+
+
+            <input
+                type="date"
+                id="travelDate"
+                required
+            >
+
+
+            <input
+                type="number"
+                id="travellers"
+                placeholder="Number of Travellers"
+                min="1"
+                required
+            >
+
+
+            <select id="hotelPreference">
+
+                <option value="">
+                    Hotel Preference
+                </option>
+
+                <option value="3 Star">
+                    3 Star
+                </option>
+
+                <option value="4 Star">
+                    4 Star
+                </option>
+
+                <option value="5 Star">
+                    5 Star
+                </option>
+
+                <option value="Please suggest">
+                    Please suggest
+                </option>
+
+            </select>
+
+
+            <select id="flightRequired">
+
+                <option value="">
+                    Flight Requirement
+                </option>
+
+                <option value="Yes, I need flight">
+                    Yes, I need flight
+                </option>
+
+                <option value="No, only package">
+                    No, only package
+                </option>
+
+                <option value="Not decided yet">
+                    Not decided yet
+                </option>
+
+            </select>
+
+
+            <button
+                type="submit"
+                class="whatsapp-btn"
+            >
+                Send Enquiry on WhatsApp
+            </button>
+
+
+        </form>
+
+
+        <span class="phone">
+            WhatsApp: +91 99460 10375
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+        NAZYAN TRAVELS
+    </div>
+
+    <div class="footer-tagline">
+        YOUR JOURNEY BEGINS WITH US
+    </div>
+
+
+    <div class="footer-services">
+
+        <span>
+            Flight Tickets
+        </span>
+
+        <span>
+            Tour Packages
+        </span>
+
+        <span>
+            Visa Services
+        </span>
+
+        <span>
+            Umrah Services
+        </span>
+
+        <span>
+            Certificate Attestation
+        </span>
+
+    </div>
+
+
+    <div class="copyright">
+        © 2026 NAZYAN TRAVELS. All Rights Reserved.
+    </div>
+
+</footer>
+
+
+
+<!-- ================= WHATSAPP SCRIPT ================= -->
+
+<script>
+
+document
+.getElementById("keralaEnquiryForm")
+.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById("customerName").value;
+
+    const date =
+        document.getElementById("travelDate").value;
+
+    const travellers =
+        document.getElementById("travellers").value;
+
+    const hotel =
+        document.getElementById("hotelPreference").value;
+
+    const flight =
+        document.getElementById("flightRequired").value;
+
+
+    const message =
+
+`Hello NAZYAN TRAVELS,
+
+I am interested in the Kerala 4 Days / 3 Nights package.
+
+Name: ${name}
+Preferred Travel Date: ${date}
+Number of Travellers: ${travellers}
+Hotel Preference: ${hotel || "Not specified"}
+Flight Requirement: ${flight || "Not specified"}
+
+Please share the available package options and final price.`;
+
+
+    const whatsappURL =
+        "https://wa.me/919946010375?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+});
+
+</script>
+
+
+</body>
+</html>

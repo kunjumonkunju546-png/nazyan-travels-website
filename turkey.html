@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Turkey Package | NAZYAN TRAVELS</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f8f8f8;
+    color:#222;
+    line-height:1.6;
+}
+
+header{
+    background:#fff;
+    padding:18px 7%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-area img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+}
+
+.brand{
+    font-size:25px;
+    font-weight:800;
+    background:linear-gradient(90deg,#d4145a,#fbb03b,#00a8c6);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.tagline{
+    font-size:11px;
+    letter-spacing:2px;
+    color:#777;
+}
+
+.back-btn{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    border:1px solid #ddd;
+    padding:9px 17px;
+    border-radius:25px;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    background:#d4145a;
+    color:#fff;
+}
+
+.hero{
+    min-height:560px;
+    background:
+        linear-gradient(rgba(40,20,20,0.28),rgba(20,10,20,0.62)),
+        url("turkey.jpg") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+    padding:50px 20px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.special-badge{
+    display:inline-block;
+    background:rgba(190,25,45,0.92);
+    color:#fff;
+    padding:9px 20px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+    letter-spacing:1.5px;
+    margin-bottom:20px;
+    box-shadow:0 6px 25px rgba(0,0,0,0.25);
+}
+
+.hero h1{
+    font-size:58px;
+    letter-spacing:5px;
+    margin-bottom:10px;
+    text-shadow:0 4px 15px rgba(0,0,0,0.35);
+}
+
+.hero h2{
+    font-size:27px;
+    font-weight:400;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.hero-highlight{
+    margin-top:14px;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    padding:14px 27px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+    background:#fff;
+    color:#222;
+}
+
+.btn-whatsapp{
+    background:#25D366;
+    color:#fff;
+}
+
+.container{
+    width:88%;
+    max-width:1150px;
+    margin:auto;
+}
+
+.intro{
+    text-align:center;
+    padding:65px 10px 35px;
+}
+
+.intro h2{
+    font-size:35px;
+    margin-bottom:15px;
+    color:#b51f35;
+}
+
+.intro p{
+    max-width:820px;
+    margin:auto;
+    color:#666;
+    font-size:16px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+    margin:35px 0 60px;
+}
+
+.info-card{
+    background:#fff;
+    padding:27px 15px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.06);
+    border-top:4px solid #d4145a;
+}
+
+.info-card h3{
+    font-size:15px;
+    margin-bottom:7px;
+}
+
+.info-card p{
+    color:#777;
+    font-size:14px;
+}
+
+.visual{
+    min-height:350px;
+    background:
+        linear-gradient(rgba(40,20,20,0.20),rgba(20,10,20,0.48)),
+        url("turkey.jpg") center/cover no-repeat;
+    border-radius:22px;
+    margin-bottom:70px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+    padding:30px;
+    box-shadow:0 12px 35px rgba(120,30,40,0.18);
+}
+
+.visual h2{
+    font-size:40px;
+    text-shadow:0 3px 15px rgba(0,0,0,0.4);
+}
+
+.section-title{
+    text-align:center;
+    font-size:33px;
+    margin-bottom:35px;
+    color:#b51f35;
+}
+
+.itinerary{
+    display:grid;
+    gap:20px;
+    margin-bottom:70px;
+}
+
+.day{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    border-left:5px solid #d4145a;
+}
+
+.day h3{
+    margin-bottom:8px;
+    font-size:20px;
+}
+
+.day p{
+    color:#666;
+}
+
+.two-column{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-bottom:70px;
+}
+
+.box{
+    background:#fff;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.box h2{
+    margin-bottom:18px;
+}
+
+.box ul{
+    padding-left:20px;
+    color:#666;
+}
+
+.box li{
+    margin-bottom:9px;
+}
+
+.price-box{
+    text-align:center;
+    background:linear-gradient(135deg,#fff,#fff4f5);
+    padding:45px 25px;
+    border-radius:22px;
+    box-shadow:0 8px 30px rgba(180,30,50,0.12);
+    margin-bottom:60px;
+    border:1px solid #f3d8dc;
+}
+
+.price-label{
+    font-size:14px;
+    letter-spacing:2px;
+    color:#777;
+    text-transform:uppercase;
+}
+
+.price{
+    font-size:50px;
+    font-weight:900;
+    color:#b51f35;
+    margin:5px 0 0;
+}
+
+.starting-text{
+    color:#d4145a;
+    font-weight:800;
+    font-size:15px;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.price-note{
+    color:#777;
+    font-size:13px;
+    max-width:720px;
+    margin:10px auto 22px;
+}
+
+.enquiry{
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 25px rgba(0,0,0,0.07);
+    margin-bottom:70px;
+}
+
+.enquiry h2{
+    text-align:center;
+    margin-bottom:10px;
+    font-size:30px;
+    color:#b51f35;
+}
+
+.enquiry-intro{
+    text-align:center;
+    color:#777;
+    margin-bottom:30px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group.full{
+    grid-column:1/-1;
+}
+
+label{
+    font-weight:600;
+    margin-bottom:7px;
+    font-size:14px;
+}
+
+input,
+select{
+    padding:13px 14px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+}
+
+input:focus,
+select:focus{
+    border-color:#d4145a;
+}
+
+.submit-btn{
+    grid-column:1/-1;
+    border:none;
+    background:#25D366;
+    color:#fff;
+    padding:15px;
+    border-radius:30px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:8px;
+}
+
+footer{
+    background:#30151b;
+    color:#fff;
+    text-align:center;
+    padding:38px 20px;
+}
+
+footer h3{
+    margin-bottom:8px;
+}
+
+footer p{
+    color:#e4cbd0;
+    font-size:14px;
+}
+
+@media(max-width:850px){
+
+    .info-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .two-column{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:44px;
+    }
+}
+
+@media(max-width:600px){
+
+    header{
+        padding:14px 5%;
+    }
+
+    .logo-area img{
+        width:45px;
+        height:45px;
+    }
+
+    .brand{
+        font-size:20px;
+    }
+
+    .tagline{
+        font-size:8px;
+    }
+
+    .back-btn{
+        padding:7px 12px;
+        font-size:13px;
+    }
+
+    .hero{
+        min-height:500px;
+    }
+
+    .hero h1{
+        font-size:36px;
+        letter-spacing:2px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .special-badge{
+        font-size:11px;
+        padding:8px 14px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .intro h2{
+        font-size:29px;
+    }
+
+    .visual h2{
+        font-size:30px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .form-group.full,
+    .submit-btn{
+        grid-column:auto;
+    }
+
+    .enquiry{
+        padding:25px 18px;
+    }
+
+    .price{
+        font-size:40px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+    <div class="logo-area">
+
+        <img
+            src="nazyAn-logo.png"
+            alt="NAZYAN TRAVELS Logo"
+        >
+
+        <div>
+
+            <div class="brand">
+                NAZYAN TRAVELS
+            </div>
+
+            <div class="tagline">
+                YOUR JOURNEY BEGINS WITH US
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="index.html"
+        class="back-btn"
+    >
+        ← Back to Home
+    </a>
+
+</header>
+
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+
+        <div class="special-badge">
+            🇹🇷 TURKEY ESCAPE
+        </div>
+
+
+        <h1>
+            TURKEY
+        </h1>
+
+
+        <h2>
+            Turkey Holiday Experience
+        </h2>
+
+
+        <p>
+            6 Days / 5 Nights · Istanbul · Cappadocia
+        </p>
+
+
+        <div class="hero-highlight">
+            History • Culture • Scenic Beauty • Unique Experiences
+        </div>
+
+
+        <div class="buttons">
+
+
+            <a
+                href="#package"
+                class="btn btn-primary"
+            >
+                Explore Package
+            </a>
+
+
+            <a
+                href="#enquiry"
+                class="btn btn-whatsapp"
+            >
+                WhatsApp Enquiry
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section
+    class="intro container"
+    id="package"
+>
+
+    <h2>
+        Discover Turkey
+    </h2>
+
+
+    <p>
+        Explore the fascinating mix of European and Asian
+        influences, historic landmarks, vibrant streets,
+        beautiful landscapes and unforgettable experiences
+        across Istanbul and Cappadocia.
+    </p>
+
+</section>
+
+
+
+<section class="container">
+
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <h3>
+                Duration
+            </h3>
+
+            <p>
+                6 Days / 5 Nights
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Destinations
+            </h3>
+
+            <p>
+                Istanbul · Cappadocia
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Accommodation
+            </h3>
+
+            <p>
+                Selected Hotels
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>
+                Transportation
+            </h3>
+
+            <p>
+                Transfers as per itinerary
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="visual">
+
+        <h2>
+            Experience Turkey
+        </h2>
+
+    </div>
+
+
+
+    <h2 class="section-title">
+        Your Turkey Itinerary
+    </h2>
+
+
+    <div class="itinerary">
+
+
+        <div class="day">
+
+            <h3>
+                Day 01 — Arrival in Istanbul
+            </h3>
+
+            <p>
+                Arrive in Istanbul, complete the airport transfer
+                and check in to your hotel. Enjoy free time to
+                relax and explore the surrounding area.
+            </p>
+
+        </div>
+
+
+
+        <div class="day">
+
+            <h3>
+                Day 02 — Istanbul City Experience
+            </h3>
+
+            <p>
+                Discover the historic heart of Istanbul with
+                selected attractions and cultural experiences.
+                Enjoy the unique atmosphere of this fascinating
+                city.
+            </p>
+
+        </div>
+
+
+
+        <div class="day">
+
+            <h3>
+                Day 03 — Istanbul & Local Experience
+            </h3>
+
+            <p>
+                Continue exploring Istanbul with selected
+                sightseeing, local markets, scenic areas and
+                leisure time.
+            </p>
+
+        </div>
+
+
+
+        <div class="day">
+
+            <h3>
+                Day 04 — Istanbul to Cappadocia
+            </h3>
+
+            <p>
+                Travel towards Cappadocia and check in to your
+                hotel. Enjoy the spectacular surroundings and
+                unique rock formations.
+            </p>
+
+        </div>
+
+
+
+        <div class="day">
+
+            <h3>
+                Day 05 — Cappadocia Experience
+            </h3>
+
+            <p>
+                Explore the highlights of Cappadocia including
+                selected valleys, viewpoints and cultural
+                attractions.
+            </p>
+
+        </div>
+
+
+
+        <div class="day">
+
+            <h3>
+                Day 06 — Departure
+            </h3>
+
+            <p>
+                Check out from the hotel and proceed for the
+                airport transfer and onward journey.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="two-column">
+
+
+        <div class="box">
+
+            <h2>
+                ✓ Package Includes
+            </h2>
+
+            <ul>
+
+                <li>
+                    Hotel accommodation
+                </li>
+
+                <li>
+                    Airport / hotel transfers
+                </li>
+
+                <li>
+                    Selected Istanbul sightseeing
+                </li>
+
+                <li>
+                    Cappadocia sightseeing
+                </li>
+
+                <li>
+                    Transportation as per itinerary
+                </li>
+
+                <li>
+                    Travel assistance
+                </li>
+
+                <li>
+                    Flight option available
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <div class="box">
+
+            <h2>
+                ✕ Not Included
+            </h2>
+
+            <ul>
+
+                <li>
+                    Personal expenses
+                </li>
+
+                <li>
+                    Meals not specifically mentioned
+                </li>
+
+                <li>
+                    Travel insurance
+                </li>
+
+                <li>
+                    Visa charges if applicable
+                </li>
+
+                <li>
+                    Optional activities
+                </li>
+
+                <li>
+                    Hot air balloon experience
+                </li>
+
+                <li>
+                    Anything not specifically listed above
+                </li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="price-box">
+
+
+        <div class="price-label">
+            TURKEY HOLIDAY PACKAGE
+        </div>
+
+
+        <div class="price">
+            ₹44,999
+        </div>
+
+
+        <div class="starting-text">
+            STARTING FROM
+        </div>
+
+
+        <div class="price-note">
+            Final price may vary depending on travel dates,
+            hotel category, flight availability, visa
+            requirements, number of travellers and selected
+            inclusions.
+        </div>
+
+
+        <a
+            href="#enquiry"
+            class="btn btn-whatsapp"
+        >
+            Get Your Package Quote
+        </a>
+
+
+    </div>
+
+
+
+    <div
+        class="enquiry"
+        id="enquiry"
+    >
+
+
+        <h2>
+            Plan Your Turkey Trip
+        </h2>
+
+
+        <p class="enquiry-intro">
+            Tell us your requirements and we will share the
+            available package options and final price.
+        </p>
+
+
+        <form
+            class="form-grid"
+            onsubmit="sendWhatsApp(); return false;"
+        >
+
+
+            <div class="form-group">
+
+                <label>
+                    Your Name
+                </label>
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Preferred Travel Date
+                </label>
+
+                <input
+                    type="date"
+                    id="travelDate"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Number of Travellers
+                </label>
+
+                <input
+                    type="number"
+                    id="travellers"
+                    min="1"
+                    placeholder="e.g. 2"
+                    required
+                >
+
+            </div>
+
+
+
+            <div class="form-group">
+
+                <label>
+                    Hotel Preference
+                </label>
+
+                <select
+                    id="hotelPreference"
+                >
+
+                    <option value="">
+                        Select hotel category
+                    </option>
+
+                    <option>
+                        3 Star
+                    </option>
+
+                    <option>
+                        4 Star
+                    </option>
+
+                    <option>
+                        5 Star
+                    </option>
+
+                    <option>
+                        Please suggest
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="form-group full">
+
+                <label>
+                    Flight Requirement
+                </label>
+
+                <select
+                    id="flightRequired"
+                >
+
+                    <option value="">
+                        Select an option
+                    </option>
+
+                    <option>
+                        Yes, I need flight
+                    </option>
+
+                    <option>
+                        No, only package
+                    </option>
+
+                    <option>
+                        Not decided yet
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <button
+                type="submit"
+                class="submit-btn"
+            >
+                Send Enquiry on WhatsApp
+            </button>
+
+
+        </form>
+
+    </div>
+
+
+</section>
+
+
+
+<footer>
+
+    <h3>
+        NAZYAN TRAVELS
+    </h3>
+
+    <p>
+        Your Journey Begins With Us
+    </p>
+
+    <p>
+        WhatsApp: +91 99460 10375
+    </p>
+
+</footer>
+
+
+
+<script>
+
+function sendWhatsApp(){
+
+    const name =
+        document.getElementById("customerName").value;
+
+    const date =
+        document.getElementById("travelDate").value;
+
+    const travellers =
+        document.getElementById("travellers").value;
+
+    const hotel =
+        document.getElementById("hotelPreference").value;
+
+    const flight =
+        document.getElementById("flightRequired").value;
+
+
+    const message =
+`Hello NAZYAN TRAVELS,
+
+I am interested in the Turkey 6 Days / 5 Nights package.
+
+Name: ${name}
+Preferred Travel Date: ${date}
+Number of Travellers: ${travellers}
+Hotel Preference: ${hotel || "Not specified"}
+Flight Requirement: ${flight || "Not specified"}
+
+Please share the available package options and final price.`;
+
+
+    const whatsappURL =
+        "https://wa.me/919946010375?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+}
+
+</script>
+
+
+</body>
+</html>

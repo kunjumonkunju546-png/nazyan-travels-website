@@ -1,0 +1,2275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NAZYAN TRAVELS | Premium Travel & Flight Services</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f7f4;
+    color:#222;
+}
+
+a{
+    text-decoration:none;
+}
+
+:root{
+    --gold:#d4af37;
+    --dark:#101010;
+    --cream:#f8f7f4;
+    --text:#222;
+    --muted:#777;
+    --line:#e9e7df;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    padding:20px 6%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.55),
+        rgba(0,0,0,0)
+    );
+}
+
+.logo img{
+    width:175px;
+    height:auto;
+    display:block;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:27px;
+}
+
+nav a{
+    color:white;
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:.3px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+.nav-enquiry{
+    padding:11px 20px;
+    border:1px solid var(--gold);
+    border-radius:30px;
+    color:white;
+}
+
+.nav-enquiry:hover{
+    background:var(--gold);
+    color:#111;
+}
+
+.menu-btn{
+    display:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+
+    position:relative;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.72) 0%,
+        rgba(0,0,0,.42) 48%,
+        rgba(0,0,0,.18) 100%
+    ),
+    url("travel.jpg") center center / cover no-repeat;
+
+    display:flex;
+    align-items:center;
+
+    padding:130px 6% 90px;
+
+    color:white;
+}
+
+.hero-content{
+    max-width:760px;
+    position:relative;
+    z-index:2;
+}
+
+.hero-small{
+    color:var(--gold);
+    font-size:14px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:68px;
+    line-height:1.05;
+    font-weight:700;
+    letter-spacing:-1px;
+    margin-bottom:22px;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero-description{
+    max-width:620px;
+    font-size:19px;
+    line-height:1.7;
+    color:rgba(255,255,255,.9);
+    margin-bottom:32px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn-primary{
+    display:inline-block;
+    padding:15px 28px;
+
+    background:var(--gold);
+    color:#111;
+
+    border-radius:30px;
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    background:white;
+    transform:translateY(-2px);
+}
+
+.btn-outline{
+    display:inline-block;
+    padding:14px 28px;
+
+    border:1px solid rgba(255,255,255,.7);
+    color:white;
+
+    border-radius:30px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:#111;
+}
+
+
+/* =========================
+   HERO INFO STRIP
+========================= */
+
+.hero-strip{
+    width:100%;
+
+    background:white;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    border-bottom:1px solid var(--line);
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.hero-strip-item{
+    padding:24px 30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:14px;
+
+    border-right:1px solid var(--line);
+}
+
+.hero-strip-item:last-child{
+    border-right:none;
+}
+
+.hero-strip-icon{
+    font-size:28px;
+}
+
+.hero-strip-text strong{
+    display:block;
+    color:#222;
+    font-size:16px;
+    margin-bottom:3px;
+}
+
+.hero-strip-text span{
+    color:#777;
+    font-size:12px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:90px 6%;
+}
+
+.section-heading{
+    max-width:750px;
+    margin:0 auto 50px;
+    text-align:center;
+}
+
+.section-label{
+    color:var(--gold);
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    margin-bottom:12px;
+}
+
+.section-heading h2{
+    font-size:42px;
+    margin-bottom:14px;
+}
+
+.section-heading p{
+    color:var(--muted);
+    line-height:1.7;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+}
+
+.service-card{
+    background:white;
+    padding:35px 25px;
+
+    border-radius:18px;
+
+    border:1px solid #eee;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.06);
+
+    transition:.35s;
+}
+
+.service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 45px rgba(0,0,0,.10);
+}
+
+.service-icon{
+    width:55px;
+    height:55px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#faf6e7;
+    color:#9b7a12;
+
+    border-radius:15px;
+
+    font-size:25px;
+
+    margin-bottom:22px;
+}
+
+.service-card h3{
+    font-size:19px;
+    margin-bottom:12px;
+}
+
+.service-card p{
+    color:#777;
+    line-height:1.7;
+    font-size:14px;
+}
+
+
+/* =========================
+   DESTINATIONS
+========================= */
+
+.destination-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.destination-card{
+    min-height:180px;
+
+    padding:28px;
+
+    border-radius:18px;
+
+    background:linear-gradient(145deg,#fff,#f4f1e8);
+
+    border:1px solid #eee;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    transition:.3s;
+}
+
+.destination-card:hover{
+    transform:translateY(-5px);
+}
+
+.destination-card .flag{
+    font-size:30px;
+    line-height:1;
+    display:block;
+    width:max-content;
+    height:36px;
+    margin-bottom:15px;
+    font-family:"Segoe UI Emoji","Apple Color Emoji","Noto Color Emoji",sans-serif;
+}
+
+.destination-card h3{
+    font-size:21px;
+    margin-bottom:7px;
+}
+
+.destination-card p{
+    color:#777;
+    font-size:13px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:white;
+}
+
+.about-wrapper{
+    max-width:1050px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-title h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.about-title p{
+    color:#666;
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+.about-box{
+    padding:35px;
+
+    background:#111;
+    color:white;
+
+    border-radius:22px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+.about-box h3{
+    color:var(--gold);
+    margin-bottom:15px;
+}
+
+.about-box p{
+    color:#ddd;
+    line-height:1.8;
+}
+
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.why-section{
+    background:#f3f1eb;
+}
+
+.why-grid{
+    max-width:1050px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.why-card{
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    border:1px solid #e9e7df;
+}
+
+.why-number{
+    color:var(--gold);
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.why-card h3{
+    margin-bottom:10px;
+}
+
+.why-card p{
+    color:#777;
+    line-height:1.7;
+    font-size:14px;
+}
+
+
+/* =========================
+   FLIGHT ENQUIRY
+========================= */
+
+.flight-enquiry-section{
+    background:#111;
+    padding:90px 6%;
+}
+
+.flight-enquiry-wrapper{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:50px;
+    align-items:center;
+}
+
+.flight-enquiry-text .section-label{
+    color:var(--gold);
+}
+
+.flight-enquiry-text h2{
+    color:white;
+    font-size:42px;
+    line-height:1.2;
+    margin-bottom:18px;
+}
+
+.flight-enquiry-text p{
+    color:#ccc;
+    line-height:1.8;
+    max-width:500px;
+}
+
+.flight-enquiry-card{
+    background:white;
+    padding:35px;
+    border-radius:22px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+
+.flight-enquiry-card h3{
+    font-size:24px;
+    margin-bottom:25px;
+}
+
+.flight-enquiry-options{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+    margin-bottom:22px;
+}
+
+.flight-option{
+    padding:18px;
+    background:#f8f7f4;
+    border:1px solid #e9e7df;
+    border-radius:14px;
+}
+
+.flight-option span{
+    display:block;
+    color:#888;
+    font-size:12px;
+    margin-bottom:6px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.flight-option strong{
+    font-size:16px;
+    color:#222;
+}
+
+.flight-enquiry-button{
+    display:block;
+    width:100%;
+    text-align:center;
+
+    padding:15px 25px;
+
+    background:var(--gold);
+    color:#111;
+
+    border-radius:30px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.flight-enquiry-button:hover{
+    background:#111;
+    color:white;
+}
+
+
+/* =========================
+   FEATURED PACKAGES
+========================= */
+
+.package-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.package-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+
+    border:1px solid #eee;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.07);
+
+    transition:.35s;
+}
+
+.package-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+}
+
+.package-card img{
+    width:100%;
+    height:240px;
+    object-fit:cover;
+}
+
+.package-content{
+    padding:25px;
+}
+
+.package-content h3{
+    font-size:23px;
+    margin-bottom:10px;
+}
+
+.package-content p{
+    color:#777;
+    line-height:1.6;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+.package-btn{
+    display:inline-block;
+
+    padding:11px 21px;
+
+    background:#111;
+    color:white;
+
+    border-radius:25px;
+
+    font-size:13px;
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.package-btn:hover{
+    background:var(--gold);
+    color:#111;
+}
+
+
+/* =========================
+   ALL PACKAGES
+========================= */
+
+#allPackages{
+    display:none;
+    background:#f3f1eb;
+}
+
+.package-category{
+    max-width:1100px;
+    margin:0 auto 50px;
+}
+
+.package-category h3{
+    font-size:25px;
+    margin-bottom:20px;
+
+    padding-left:14px;
+
+    border-left:4px solid var(--gold);
+}
+
+.package-list{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.package-item{
+    background:white;
+
+    padding:18px;
+
+    border-radius:13px;
+
+    border:1px solid #eee;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+
+    transition:.25s;
+}
+
+.package-item:hover{
+    transform:translateY(-3px);
+}
+
+.package-item span{
+    font-size:14px;
+    font-weight:600;
+}
+
+.package-item a{
+    padding:8px 14px;
+
+    background:#111;
+    color:white;
+
+    border-radius:20px;
+
+    font-size:12px;
+    white-space:nowrap;
+}
+
+.package-item a:hover{
+    background:var(--gold);
+    color:#111;
+}
+
+
+/* =========================
+   SHOW MORE
+========================= */
+
+.show-more{
+    text-align:center;
+    margin-top:40px;
+}
+
+.show-more button{
+    padding:14px 30px;
+
+    border:1px solid #222;
+    border-radius:30px;
+
+    background:white;
+    color:#111;
+
+    font-weight:600;
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.show-more button:hover{
+    background:#111;
+    color:white;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:
+    linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.82)),
+    url("travel.jpg") center/cover no-repeat;
+
+    color:white;
+    text-align:center;
+}
+
+.contact .section-heading p{
+    color:#ccc;
+}
+
+.contact-details{
+    margin-top:25px;
+}
+
+.contact-details p{
+    margin:10px;
+    color:#ddd;
+}
+
+.contact-details p a{
+    color:var(--gold);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#090909;
+    color:#888;
+
+    text-align:center;
+
+    padding:25px;
+
+    font-size:13px;
+}
+
+footer strong{
+    color:#ddd;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+
+    right:22px;
+    bottom:22px;
+
+    width:58px;
+    height:58px;
+
+    background:#25D366;
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:25px;
+
+    z-index:999;
+
+    box-shadow:0 7px 20px rgba(0,0,0,.25);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .services{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .destination-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .package-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .package-list{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero-strip{
+        grid-template-columns:1fr;
+    }
+
+    .hero-strip-item{
+        border-right:none;
+        border-bottom:1px solid var(--line);
+    }
+
+    .hero-strip-item:last-child{
+        border-bottom:none;
+    }
+
+}
+
+
+@media(max-width:700px){
+
+    header{
+        padding:17px 5%;
+    }
+
+    .logo img{
+        width:145px;
+    }
+
+    nav{
+        display:none;
+
+        position:absolute;
+
+        top:72px;
+        left:0;
+
+        width:100%;
+
+        padding:25px;
+
+        background:rgba(10,10,10,.97);
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .hero{
+        min-height:100vh;
+        padding:120px 6% 80px;
+        align-items:center;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+    .hero-strip-item{
+        justify-content:flex-start;
+        padding:20px 7%;
+    }
+
+    section{
+        padding:70px 5%;
+    }
+
+    .section-heading h2{
+        font-size:32px;
+    }
+
+    .services,
+    .destination-grid,
+    .package-grid,
+    .package-list{
+        grid-template-columns:1fr;
+    }
+
+    .about-title h2{
+        font-size:32px;
+    }
+
+    .flight-enquiry-section{
+        padding:70px 5%;
+    }
+
+    .flight-enquiry-wrapper{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .flight-enquiry-text h2{
+        font-size:32px;
+    }
+
+    .flight-enquiry-card{
+        padding:25px;
+    }
+
+    .flight-enquiry-options{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img
+                src="nazyAn-logo.png"
+                alt="NAZYAN TRAVELS"
+            >
+
+        </a>
+
+    </div>
+
+
+    <nav id="navMenu">
+
+        <a href="#home">Home</a>
+
+        <a href="flight-enquiry.html">Flight Enquiry</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#destinations">Destinations</a>
+
+        <a href="#about">About</a>
+
+        <a href="#packages">Packages</a>
+
+        <a href="#contact">Contact</a>
+
+        <a
+            class="nav-enquiry"
+            href="https://wa.me/919946010375?text=Hello%20NAZYAN%20TRAVELS,%20I%20would%20like%20to%20make%20a%20travel%20enquiry."
+            target="_blank"
+        >
+            Enquire Now
+        </a>
+
+    </nav>
+
+
+    <div
+        class="menu-btn"
+        onclick="toggleMenu()"
+    >
+        ☰
+    </div>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            Flight Enquiry
+        </div>
+
+
+        <h1>
+            Find Your Right Flight
+            <span>With NAZYAN</span>
+        </h1>
+
+
+        <p class="hero-description">
+
+            Tell us your travel requirements and
+            let NAZYAN TRAVELS help you find
+            suitable domestic and international
+            flight options for your journey.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                class="btn-primary"
+                href="flight-enquiry.html"
+            >
+                Make Flight Enquiry
+            </a>
+
+
+            <a
+                class="btn-outline"
+                href="#packages"
+            >
+                Explore Packages
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     HERO INFO STRIP
+========================= -->
+
+<div class="hero-strip">
+
+    <div class="hero-strip-item">
+
+        <div class="hero-strip-icon">
+            ✈️
+        </div>
+
+        <div class="hero-strip-text">
+
+            <strong>Flights</strong>
+
+            <span>
+                Domestic & International
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-strip-item">
+
+        <div class="hero-strip-icon">
+            🌍
+        </div>
+
+        <div class="hero-strip-text">
+
+            <strong>Holidays</strong>
+
+            <span>
+                Worldwide Packages
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-strip-item">
+
+        <div class="hero-strip-icon">
+            🤝
+        </div>
+
+        <div class="hero-strip-text">
+
+            <strong>Assistance</strong>
+
+            <span>
+                Personal Travel Support
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            What We Offer
+        </div>
+
+        <h2>
+            Travel Made Simple
+        </h2>
+
+        <p>
+            Everything you need for a smooth and memorable journey.
+        </p>
+
+    </div>
+
+
+    <div class="services">
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                ✈
+            </div>
+
+            <h3>
+                Flight Tickets
+            </h3>
+
+            <p>
+                Domestic and international flight booking
+                with suitable fares and travel options.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🌍
+            </div>
+
+            <h3>
+                Tour Packages
+            </h3>
+
+            <p>
+                Carefully planned holiday packages
+                for families, couples and groups.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🕋
+            </div>
+
+            <h3>
+                Umrah Service
+            </h3>
+
+            <p>
+                Travel assistance and arrangements
+                for your Umrah journey.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                📄
+            </div>
+
+            <h3>
+                Visa Service
+            </h3>
+
+            <p>
+                Assistance with visa-related
+                travel requirements.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     DESTINATIONS
+========================= -->
+
+<section id="destinations">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            Explore
+        </div>
+
+        <h2>
+            Popular Destinations
+        </h2>
+
+        <p>
+            From the Gulf to India and destinations around the world.
+        </p>
+
+    </div>
+
+
+    <div class="destination-grid">
+
+
+        <div class="destination-card">
+
+            <div class="flag">🇶🇦</div>
+
+            <h3>Qatar</h3>
+
+            <p>
+                Doha, Qatar & beyond.
+            </p>
+
+        </div>
+
+
+        <div class="destination-card">
+
+            <div class="flag">🇦🇪</div>
+
+            <h3>UAE</h3>
+
+            <p>
+                Dubai, Abu Dhabi & more.
+            </p>
+
+        </div>
+
+
+        <div class="destination-card">
+
+            <div class="flag">🇸🇦</div>
+
+            <h3>Saudi Arabia</h3>
+
+            <p>
+                Riyadh, Jeddah & beyond.
+            </p>
+
+        </div>
+
+
+        <div class="destination-card">
+
+            <div class="flag">🇴🇲</div>
+
+            <h3>Oman</h3>
+
+            <p>
+                Muscat, Salalah & more.
+            </p>
+
+        </div>
+
+
+        <div class="destination-card">
+
+            <div class="flag">🇰🇼</div>
+
+            <h3>Kuwait</h3>
+
+            <p>
+                Kuwait City & beyond.
+            </p>
+
+        </div>
+
+
+        <div class="destination-card">
+
+            <div class="flag">🇧🇭</div>
+
+            <h3>Bahrain</h3>
+
+            <p>
+                Manama & Bahrain.
+            </p>
+
+        </div>
+
+
+        <div class="destination-card">
+
+            <div class="flag">🇮🇳</div>
+
+            <h3>India</h3>
+
+            <p>
+                Kerala & destinations across India.
+            </p>
+
+        </div>
+
+
+        <div class="destination-card">
+
+            <div class="flag">🌍</div>
+
+            <h3>Worldwide</h3>
+
+            <p>
+                International destinations worldwide.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+    class="about"
+    id="about"
+>
+
+    <div class="about-wrapper">
+
+
+        <div class="about-title">
+
+            <div class="section-label">
+                About Us
+            </div>
+
+            <h2>
+                Your Journey,
+                Our Assistance
+            </h2>
+
+            <p>
+                NAZYAN TRAVELS provides travel services
+                focused on flight tickets, holiday packages
+                and travel assistance.
+            </p>
+
+            <p>
+                Our goal is to make your travel planning
+                simple, comfortable and stress-free.
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <h3>
+                NAZYAN TRAVELS
+            </h3>
+
+            <p>
+                Whether you are planning a family holiday,
+                a business trip or your next international
+                adventure, we are here to assist you with
+                your travel requirements.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     WHY CHOOSE US
+========================= -->
+
+<section class="why-section">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            Why NAZYAN
+        </div>
+
+        <h2>
+            Travel With Confidence
+        </h2>
+
+    </div>
+
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <div class="why-number">
+                01
+            </div>
+
+            <h3>
+                Special Fare Assistance
+            </h3>
+
+            <p>
+                We help you explore suitable flight
+                options according to your travel needs.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-number">
+                02
+            </div>
+
+            <h3>
+                Personal Assistance
+            </h3>
+
+            <p>
+                Get direct assistance for your travel
+                planning and booking requirements.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <div class="why-number">
+                03
+            </div>
+
+            <h3>
+                Complete Travel Support
+            </h3>
+
+            <p>
+                From flights to holiday packages,
+                we help make your journey easier.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FLIGHT ENQUIRY
+========================= -->
+
+<section class="flight-enquiry-section">
+
+    <div class="flight-enquiry-wrapper">
+
+
+        <div class="flight-enquiry-text">
+
+            <div class="section-label">
+                Flight Enquiry
+            </div>
+
+            <h2>
+                Your Journey Starts
+                With The Right Flight
+            </h2>
+
+            <p>
+                Tell us your travel requirements and
+                we'll help you find suitable flight
+                options for your journey.
+            </p>
+
+        </div>
+
+
+        <div class="flight-enquiry-card">
+
+            <h3>
+                Plan Your Flight
+            </h3>
+
+
+            <div class="flight-enquiry-options">
+
+                <div class="flight-option">
+
+                    <span>
+                        From
+                    </span>
+
+                    <strong>
+                        Your City
+                    </strong>
+
+                </div>
+
+
+                <div class="flight-option">
+
+                    <span>
+                        To
+                    </span>
+
+                    <strong>
+                        Your Destination
+                    </strong>
+
+                </div>
+
+
+                <div class="flight-option">
+
+                    <span>
+                        Travel Date
+                    </span>
+
+                    <strong>
+                        Select Date
+                    </strong>
+
+                </div>
+
+
+                <div class="flight-option">
+
+                    <span>
+                        Passengers
+                    </span>
+
+                    <strong>
+                        Adults / Children
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <a
+                class="flight-enquiry-button"
+                href="flight-enquiry.html"
+            >
+                Make Flight Enquiry →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FEATURED PACKAGES
+========================= -->
+
+<section id="packages">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            Holiday Collection
+        </div>
+
+        <h2>
+            Featured Packages
+        </h2>
+
+        <p>
+            Discover some of our selected travel experiences.
+        </p>
+
+    </div>
+
+
+    <div class="package-grid">
+
+
+        <!-- KERALA -->
+
+        <div class="package-card">
+
+            <img
+                src="kerala.jpg"
+                alt="Kerala"
+            >
+
+            <div class="package-content">
+
+                <h3>
+                    Kerala
+                </h3>
+
+                <p>
+                    Experience the beauty of God's Own Country.
+                </p>
+
+                <a
+                    class="package-btn"
+                    href="kerala.html"
+                >
+                    View Package
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DUBAI -->
+
+        <div class="package-card">
+
+            <img
+                src="dubai.jpg"
+                alt="Dubai"
+            >
+
+            <div class="package-content">
+
+                <h3>
+                    Dubai
+                </h3>
+
+                <p>
+                    Luxury, adventure and unforgettable experiences.
+                </p>
+
+                <a
+                    class="package-btn"
+                    href="dubai.html"
+                >
+                    View Package
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- THAILAND -->
+
+        <div class="package-card">
+
+            <img
+                src="thailand.jpg"
+                alt="Thailand"
+            >
+
+            <div class="package-content">
+
+                <h3>
+                    Thailand
+                </h3>
+
+                <p>
+                    Beaches, islands and tropical adventures.
+                </p>
+
+                <a
+                    class="package-btn"
+                    href="thailand.html"
+                >
+                    View Package
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="show-more">
+
+        <button
+            onclick="showPackages()"
+            id="showBtn"
+        >
+            View All Packages
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ALL PACKAGES
+========================= -->
+
+<section id="allPackages">
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            Explore More
+        </div>
+
+        <h2>
+            All Travel Packages
+        </h2>
+
+        <p>
+            Choose your destination and explore the package details.
+        </p>
+
+    </div>
+
+
+
+    <!-- INTERNATIONAL -->
+
+    <div class="package-category">
+
+        <h3>
+            🌍 International
+        </h3>
+
+        <div class="package-list">
+
+            <div class="package-item">
+                <span>Malaysia</span>
+                <a href="malaysia.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Singapore</span>
+                <a href="singapore.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Saudi Arabia</span>
+                <a href="saudi-arabia.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Oman</span>
+                <a href="oman.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Thailand</span>
+                <a href="thailand.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Dubai / UAE</span>
+                <a href="dubai.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Vietnam</span>
+                <a href="vietnam.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Bali</span>
+                <a href="bali.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Japan</span>
+                <a href="japan.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Turkey</span>
+                <a href="turkey.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Bhutan</span>
+                <a href="bhutan.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Qatar</span>
+                <a href="qatar.html">View</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ISLAND -->
+
+    <div class="package-category">
+
+        <h3>
+            🏝 Island Holidays
+        </h3>
+
+        <div class="package-list">
+
+            <div class="package-item">
+                <span>Lakshadweep</span>
+                <a href="lakshadweep.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Phuket & Krabi</span>
+                <a href="phuket-krabi.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Bali Island</span>
+                <a href="bali.html">View</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- AFRICA -->
+
+    <div class="package-category">
+
+        <h3>
+            🌍 Africa
+        </h3>
+
+        <div class="package-list">
+
+            <div class="package-item">
+
+                <span>South Africa</span>
+
+                <a
+                    href="https://wa.me/919946010375?text=Hello%20NAZYAN%20TRAVELS,%20I%20am%20interested%20in%20the%20South%20Africa%20package."
+                    target="_blank"
+                >
+                    Enquire
+                </a>
+
+            </div>
+
+
+            <div class="package-item">
+
+                <span>Kenya</span>
+
+                <a
+                    href="https://wa.me/919946010375?text=Hello%20NAZYAN%20TRAVELS,%20I%20am%20interested%20in%20the%20Kenya%20package."
+                    target="_blank"
+                >
+                    Enquire
+                </a>
+
+            </div>
+
+
+            <div class="package-item">
+
+                <span>Egypt</span>
+
+                <a
+                    href="https://wa.me/919946010375?text=Hello%20NAZYAN%20TRAVELS,%20I%20am%20interested%20in%20the%20Egypt%20package."
+                    target="_blank"
+                >
+                    Enquire
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- AUSTRALIA -->
+
+    <div class="package-category">
+
+        <h3>
+            🇦🇺 Australia
+        </h3>
+
+        <div class="package-list">
+
+            <div class="package-item">
+
+                <span>Australia</span>
+
+                <a
+                    href="https://wa.me/919946010375?text=Hello%20NAZYAN%20TRAVELS,%20I%20am%20interested%20in%20the%20Australia%20package."
+                    target="_blank"
+                >
+                    Enquire
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- EUROPE -->
+
+    <div class="package-category">
+
+        <h3>
+            🇪🇺 Europe
+        </h3>
+
+        <div class="package-list">
+
+            <div class="package-item">
+
+                <span>Serbia</span>
+
+                <a
+                    href="https://wa.me/919946010375?text=Hello%20NAZYAN%20TRAVELS,%20I%20am%20interested%20in%20the%20Serbia%20package."
+                    target="_blank"
+                >
+                    Enquire
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- INDIA -->
+
+    <div class="package-category">
+
+        <h3>
+            🇮🇳 India / Domestic
+        </h3>
+
+        <div class="package-list">
+
+            <div class="package-item">
+                <span>Kerala</span>
+                <a href="kerala.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Goa</span>
+                <a href="goa.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Kashmir</span>
+                <a href="kashmir.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Rajasthan</span>
+                <a href="rajasthan.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Delhi & Agra</span>
+                <a href="delhi-agra.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Manali</span>
+                <a href="manali.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Hyderabad</span>
+                <a href="hyderabad.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Mumbai</span>
+                <a href="mumbai.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Bangalore</span>
+                <a href="bangalore.html">View</a>
+            </div>
+
+            <div class="package-item">
+                <span>Chennai</span>
+                <a href="chennai.html">View</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+    class="contact"
+    id="contact"
+>
+
+    <div class="section-heading">
+
+        <div class="section-label">
+            Get In Touch
+        </div>
+
+        <h2>
+            Let's Plan Your Journey
+        </h2>
+
+        <p>
+            Tell us where you want to go and we'll help
+            you plan your next journey.
+        </p>
+
+    </div>
+
+
+    <div class="contact-details">
+
+        <p>
+            📱 WhatsApp:
+            <a
+                href="https://wa.me/919946010375"
+                target="_blank"
+            >
+                +91 99460 10375
+            </a>
+        </p>
+
+
+        <p>
+            📧 Email:
+            <a
+                href="mailto:nazyaantravels@gmail.com"
+            >
+                nazyaantravels@gmail.com
+            </a>
+        </p>
+
+
+        <br>
+
+
+        <a
+            class="btn-primary"
+            href="https://wa.me/919946010375?text=Hello%20NAZYAN%20TRAVELS,%20I%20would%20like%20to%20make%20a%20travel%20enquiry."
+            target="_blank"
+        >
+            WhatsApp Enquiry
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026
+        <strong>NAZYAN TRAVELS</strong>.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/919946010375?text=Hello%20NAZYAN%20TRAVELS,%20I%20need%20travel%20assistance."
+    target="_blank"
+>
+    ☎
+</a>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function toggleMenu(){
+
+    document
+        .getElementById("navMenu")
+        .classList
+        .toggle("active");
+
+}
+
+
+function showPackages(){
+
+    const packages =
+        document.getElementById("allPackages");
+
+    const button =
+        document.getElementById("showBtn");
+
+
+    if(packages.style.display === "block"){
+
+        packages.style.display = "none";
+
+        button.innerText =
+            "View All Packages";
+
+    }else{
+
+        packages.style.display = "block";
+
+        button.innerText =
+            "Hide Packages";
+
+        packages.scrollIntoView({
+            behavior:"smooth"
+        });
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>

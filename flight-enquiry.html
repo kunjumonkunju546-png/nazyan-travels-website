@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flight Enquiry | NAZYAN TRAVELS</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI",Arial,sans-serif;
+}
+
+body{
+    background:#f8f7f4;
+    color:#222;
+}
+
+:root{
+    --gold:#d4af37;
+    --gold-dark:#a98618;
+    --dark:#0b0b0b;
+    --cream:#f8f7f4;
+    --line:#e7e1d2;
+    --muted:#777;
+}
+
+a{
+    text-decoration:none;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+
+    background:#0b0b0b;
+
+    padding:18px 6%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    border-bottom:1px solid rgba(212,175,55,.35);
+
+}
+
+.logo img{
+    width:175px;
+    display:block;
+}
+
+.back-home{
+
+    color:white;
+
+    padding:10px 20px;
+
+    border:1px solid var(--gold);
+
+    border-radius:25px;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.back-home:hover{
+
+    background:var(--gold);
+
+    color:#111;
+
+}
+
+
+/* =========================
+   PAGE HERO
+========================= */
+
+.page-hero{
+
+    min-height:300px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    color:white;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.72),
+        rgba(0,0,0,.72)
+    ),
+    url("travel.jpg") center/cover no-repeat;
+
+}
+
+.page-hero-content{
+    max-width:750px;
+}
+
+.page-label{
+
+    color:var(--gold);
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+.page-hero h1{
+
+    font-size:48px;
+
+    margin-bottom:15px;
+
+}
+
+.page-hero h1 span{
+    color:var(--gold);
+}
+
+.page-hero p{
+
+    color:#ddd;
+
+    line-height:1.7;
+
+    font-size:16px;
+
+}
+
+
+/* =========================
+   FORM AREA
+========================= */
+
+.enquiry-section{
+
+    padding:70px 6% 100px;
+
+}
+
+.enquiry-wrapper{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    background:white;
+
+    border:1px solid var(--line);
+
+    border-radius:25px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+}
+
+.form-top{
+
+    padding:30px 35px;
+
+    background:#111;
+
+    color:white;
+
+    border-bottom:3px solid var(--gold);
+
+}
+
+.form-top h2{
+
+    font-size:25px;
+
+    margin-bottom:7px;
+
+}
+
+.form-top p{
+
+    color:#bbb;
+
+    font-size:14px;
+
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+form{
+
+    padding:35px;
+
+}
+
+.form-section-title{
+
+    font-size:18px;
+
+    margin:5px 0 20px;
+
+    padding-left:12px;
+
+    border-left:3px solid var(--gold);
+
+}
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    margin-bottom:30px;
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.form-group.full{
+
+    grid-column:1/-1;
+
+}
+
+label{
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    color:#444;
+
+}
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:14px 15px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    outline:none;
+
+    background:#fff;
+
+    color:#222;
+
+    font-size:14px;
+
+    transition:.25s;
+
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    border-color:var(--gold);
+
+    box-shadow:0 0 0 3px rgba(212,175,55,.10);
+
+}
+
+textarea{
+
+    min-height:120px;
+
+    resize:vertical;
+
+}
+
+
+/* =========================
+   TRIP TYPE
+========================= */
+
+.trip-type{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:30px;
+
+}
+
+.trip-option{
+
+    position:relative;
+
+}
+
+.trip-option input{
+
+    display:none;
+
+}
+
+.trip-option label{
+
+    display:block;
+
+    padding:12px 22px;
+
+    border:1px solid #ddd;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    margin:0;
+
+    font-size:13px;
+
+    transition:.25s;
+
+}
+
+.trip-option input:checked + label{
+
+    background:#111;
+
+    color:white;
+
+    border-color:#111;
+
+}
+
+
+/* =========================
+   SUBMIT
+========================= */
+
+.submit-area{
+
+    text-align:center;
+
+    padding-top:10px;
+
+}
+
+.whatsapp-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:16px 32px;
+
+    background:var(--gold);
+
+    color:#111;
+
+    border:none;
+
+    border-radius:30px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.whatsapp-btn:hover{
+
+    background:#111;
+
+    color:white;
+
+    transform:translateY(-2px);
+
+}
+
+.form-note{
+
+    margin-top:14px;
+
+    color:#888;
+
+    font-size:12px;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    background:#090909;
+
+    color:#888;
+
+    text-align:center;
+
+    padding:25px;
+
+    font-size:13px;
+
+}
+
+footer strong{
+    color:#ddd;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px){
+
+    header{
+        padding:16px 5%;
+    }
+
+    .logo img{
+        width:145px;
+    }
+
+    .back-home{
+        padding:8px 14px;
+        font-size:12px;
+    }
+
+    .page-hero{
+        min-height:260px;
+    }
+
+    .page-hero h1{
+        font-size:36px;
+    }
+
+    .page-hero p{
+        font-size:14px;
+    }
+
+    .enquiry-section{
+        padding:45px 5% 70px;
+    }
+
+    .form-top{
+        padding:25px;
+    }
+
+    form{
+        padding:25px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+        gap:17px;
+    }
+
+    .form-group.full{
+        grid-column:auto;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:420px){
+
+    .page-hero h1{
+        font-size:31px;
+    }
+
+    .trip-option label{
+        width:100%;
+        text-align:center;
+    }
+
+    .trip-type{
+        flex-direction:column;
+    }
+
+    .whatsapp-btn{
+        width:100%;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img
+                src="nazyAn-logo.png"
+                alt="NAZYAN TRAVELS"
+            >
+
+        </a>
+
+    </div>
+
+
+    <a
+        class="back-home"
+        href="index.html"
+    >
+        ← Back to Home
+    </a>
+
+</header>
+
+
+
+<!-- =========================
+     PAGE HERO
+========================= -->
+
+<section class="page-hero">
+
+    <div class="page-hero-content">
+
+        <div class="page-label">
+            Flight Services
+        </div>
+
+        <h1>
+            Flight <span>Enquiry</span>
+        </h1>
+
+        <p>
+            Tell us your travel requirements and our team
+            will help you find suitable flight options.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ENQUIRY FORM
+========================= -->
+
+<section class="enquiry-section">
+
+    <div class="enquiry-wrapper">
+
+
+        <div class="form-top">
+
+            <h2>
+                Plan Your Flight
+            </h2>
+
+            <p>
+                Fill in your details and send your enquiry
+                directly to NAZYAN TRAVELS on WhatsApp.
+            </p>
+
+        </div>
+
+
+        <form id="flightForm">
+
+
+            <!-- TRIP DETAILS -->
+
+            <h3 class="form-section-title">
+                Trip Details
+            </h3>
+
+
+            <div class="trip-type">
+
+
+                <div class="trip-option">
+
+                    <input
+                        type="radio"
+                        id="oneway"
+                        name="trip"
+                        value="One Way"
+                        checked
+                    >
+
+                    <label for="oneway">
+                        One Way
+                    </label>
+
+                </div>
+
+
+                <div class="trip-option">
+
+                    <input
+                        type="radio"
+                        id="roundtrip"
+                        name="trip"
+                        value="Round Trip"
+                    >
+
+                    <label for="roundtrip">
+                        Round Trip
+                    </label>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="from">
+                        From
+                    </label>
+
+                    <input
+                        type="text"
+                        id="from"
+                        placeholder="e.g. Doha"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="to">
+                        To
+                    </label>
+
+                    <input
+                        type="text"
+                        id="to"
+                        placeholder="e.g. Kochi"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="departure">
+                        Departure Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="departure"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="returnDate">
+                        Return Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="returnDate"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="adults">
+                        Adults
+                    </label>
+
+                    <select id="adults">
+
+                        <option value="1">1 Adult</option>
+                        <option value="2">2 Adults</option>
+                        <option value="3">3 Adults</option>
+                        <option value="4">4 Adults</option>
+                        <option value="5">5 Adults</option>
+                        <option value="6">6 Adults</option>
+                        <option value="7">7 Adults</option>
+                        <option value="8">8 Adults</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="children">
+                        Children
+                    </label>
+
+                    <select id="children">
+
+                        <option value="0">0 Children</option>
+                        <option value="1">1 Child</option>
+                        <option value="2">2 Children</option>
+                        <option value="3">3 Children</option>
+                        <option value="4">4 Children</option>
+                        <option value="5">5 Children</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="infants">
+                        Infants
+                    </label>
+
+                    <select id="infants">
+
+                        <option value="0">0 Infants</option>
+                        <option value="1">1 Infant</option>
+                        <option value="2">2 Infants</option>
+                        <option value="3">3 Infants</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="class">
+                        Travel Class
+                    </label>
+
+                    <select id="class">
+
+                        <option>Economy</option>
+                        <option>Premium Economy</option>
+                        <option>Business Class</option>
+                        <option>First Class</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PASSENGER DETAILS -->
+
+            <h3 class="form-section-title">
+                Passenger Details
+            </h3>
+
+
+            <div class="form-grid">
+
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Passenger Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        WhatsApp Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="+974 XXXXXXXX"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group full">
+
+                    <label for="request">
+                        Special Request
+                    </label>
+
+                    <textarea
+                        id="request"
+                        placeholder="Preferred airline, baggage requirement, flexible dates, etc."
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SUBMIT -->
+
+            <div class="submit-area">
+
+                <button
+                    type="submit"
+                    class="whatsapp-btn"
+                >
+                    💬 Send Enquiry on WhatsApp
+                </button>
+
+                <p class="form-note">
+                    Your enquiry will open in WhatsApp for confirmation.
+                </p>
+
+            </div>
+
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+
+        © 2026
+        <strong>NAZYAN TRAVELS</strong>.
+        All Rights Reserved.
+
+    </p>
+
+</footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+document
+.getElementById("flightForm")
+.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+
+    const trip =
+        document.querySelector(
+            'input[name="trip"]:checked'
+        ).value;
+
+
+    const from =
+        document.getElementById("from").value;
+
+
+    const to =
+        document.getElementById("to").value;
+
+
+    const departure =
+        document.getElementById("departure").value;
+
+
+    const returnDate =
+        document.getElementById("returnDate").value;
+
+
+    const adults =
+        document.getElementById("adults").value;
+
+
+    const children =
+        document.getElementById("children").value;
+
+
+    const infants =
+        document.getElementById("infants").value;
+
+
+    const travelClass =
+        document.getElementById("class").value;
+
+
+    const name =
+        document.getElementById("name").value;
+
+
+    const phone =
+        document.getElementById("phone").value;
+
+
+    const request =
+        document.getElementById("request").value;
+
+
+    let message =
+`✈️ NAZYAN TRAVELS - FLIGHT ENQUIRY
+
+Trip Type: ${trip}
+
+From: ${from}
+To: ${to}
+
+Departure: ${departure}
+Return: ${returnDate || "Not Applicable"}
+
+Adults: ${adults}
+Children: ${children}
+Infants: ${infants}
+
+Travel Class: ${travelClass}
+
+Passenger Name: ${name}
+
+Customer WhatsApp:
+${phone}
+
+Special Request:
+${request || "None"}
+
+Please provide the available flight options and fare.
+
+Thank you,
+NAZYAN TRAVELS`;
+
+
+    const whatsappURL =
+        "https://wa.me/919946010375?text="
+        + encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+
+});
+
+</script>
+
+
+</body>
+
+</html>
